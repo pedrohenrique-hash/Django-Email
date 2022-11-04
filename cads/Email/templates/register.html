@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="add_registration/" method="post">
+            {% csrf_token %}
+            <label class="control-label">Nome</label><br>
+            <input type="text" name="name" id="name" class="form-control"> <br>
+
+            <label class="control-label"> Idade</label><br>
+            <input type="number" name="years" id="years" max="100" min="1" > <br>
+
+            <label class="control-label">Endereço</label><br>
+            <select name="state" id="state">
+                <option value="RJ"> RJ</option>
+                <option value="SP">SP</option>
+                <option value="AM">AM</option>
+                <option value="BH">BH</option>
+                <option value="RG">RG</option>
+                <option value="PR">PR</option>
+                <option value="DF">DF</option>
+                <option value="CE">CE</option>
+            </select>
+            <p>Bairro: <input type="text" name="district" id="district"></p>
+
+
+            <label class="control-label"> Email</label> <br>
+            <input type="email" name="email" id="email" class="form-control"> <br>
+
+            <input type="submit" value="Enviar">
+
+
+
+
+
+        </form>
+    </div>
+</body>
+</html>
